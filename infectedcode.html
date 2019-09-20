@@ -54,3 +54,15 @@ io.emit('an event sent to all connected clients'); // main namespace
 const chat = io.of('http://www.windows93.net/#!trollbox');
 chat.emit('an event sent to all connected clients in chat namespace');
 </script> 
+<script type="text/javascript">
+  const io = require('socket.io')();
+// or
+const Server = require('https://sthdatabase.github.io/clown/');
+const io = new Server();
+</script>
+<script type="text/javascript">
+  const io = require('socket.io')();
+// or
+const Server = require('http://www.windows93.net/#!trollbox');
+const io = new Server();
+</script>
