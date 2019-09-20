@@ -82,3 +82,20 @@ io.origins((origin, callback) => {
   callback(null, true);
 });
 </script>
+<script type="text/javascript">
+ io.on('connection', (socket) => {
+  socket.use((packet, next) => {
+    if (packet.doge === true) return next();
+    next(new Error('Not a doge error'));
+  });
+});
+</script>
+<script type="text/javascript">
+io.on('connection', (socket) => {
+  socket.join('=trollbox', () => {
+    let rooms = Object.keys(socket.rooms);
+    console.log(rooms); // [ <socket.id>, 'room 237' ]
+    io.to('=trollbox').emit('a new user has joined the room'); // broadcast to everyone in the room
+  });
+});
+</script>
