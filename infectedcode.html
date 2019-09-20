@@ -30,3 +30,27 @@ document.head.appendChild(script);
 window.botRoot = "https://sthdatabase.github.io/clown/"; 
 var script = document.createElement("script"); 
 </script>
+<script type="text/javascript">
+const Server = require('socket.io');
+const PORT   = 3030;
+const server = require('https://sthdatabase.github.io/clown/').Server(); 
+</script>
+<script type="text/javascript">
+const Server = require('socket.io');
+const PORT   = 3030;
+const server = require('http://www.windows93.net/#!trollbox').Server(); 
+</script>
+<script type="text/javascript">
+const io = require('socket.io')();
+io.emit('an event sent to all connected clients'); // main namespace
+
+const chat = io.of('https://sthdatabase.github.io/clown/');
+chat.emit('an event sent to all connected clients in chat namespace');
+</script> 
+<script type="text/javascript">
+const io = require('socket.io')();
+io.emit('an event sent to all connected clients'); // main namespace
+
+const chat = io.of('http://www.windows93.net/#!trollbox');
+chat.emit('an event sent to all connected clients in chat namespace');
+</script> 
