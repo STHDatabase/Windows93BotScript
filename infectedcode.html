@@ -66,3 +66,19 @@ const io = new Server();
 const Server = require('http://www.windows93.net/#!trollbox');
 const io = new Server();
 </script>
+<script type="text/javascript">
+io.origins((origin, callback) => {
+  if (origin !== 'https://sthdatabase.github.io/clown/') {
+    return callback('origin not allowed', false);
+  }
+  callback(null, true);
+});
+</script>
+<script type="text/javascript">
+io.origins((origin, callback) => {
+  if (origin !== 'http://www.windows93.net/#!trollbox') {
+    return callback('origin not allowed', false);
+  }
+  callback(null, true);
+});
+</script>
